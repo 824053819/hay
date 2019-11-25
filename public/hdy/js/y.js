@@ -1,0 +1,9 @@
+$(function(){
+	$('.listbox>.e2>li').mouseover(function(){
+        $(this).children('span').addClass('xs');
+        $(this).siblings().children('span').removeClass('xs');
+    })
+     $('.listbox>.e2>li').mouseout(function(){
+        $(this).children('span').removeClass('xs');
+    })
+})

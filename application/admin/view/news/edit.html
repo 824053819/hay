@@ -1,0 +1,96 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ne_ce')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-ne_ce" data-rule="required" class="form-control selectpicker" name="row[ne_ce]">
+                {foreach name="neCeList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.ne_ce"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ne_title')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ne_title" data-rule="required" class="form-control" name="row[ne_title]" type="text" value="{$row.ne_title|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ne_image')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-ne_image"  class="form-control" size="50" name="row[ne_image]" type="text" value="{$row.ne_image|htmlentities}">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-ne_image" class="btn btn-danger plupload" data-input-id="c-ne_image" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-ne_image"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-ne_image" class="btn btn-primary fachoose" data-input-id="c-ne_image" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-ne_image"></span>
+            </div>
+            <ul class="row list-inline plupload-preview" id="p-ne_image"></ul>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Brief')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-brief" data-rule="required" class="form-control " rows="5" name="row[brief]" cols="50">{$row.brief|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ne_content')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-ne_content" data-rule="required" class="form-control editor" rows="5" name="row[ne_content]" cols="50">{$row.ne_content|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ne_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ne_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[ne_time]" type="text" value="{:$row.ne_time?datetime($row.ne_time):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <div class="radio">
+            {foreach name="statusList" item="vo"}
+            <label for="row[status]-{$key}"><input id="row[status]-{$key}" name="row[status]" type="radio" value="{$key}" {in name="key" value="$row.status"}checked{/in} /> {$vo}</label> 
+            {/foreach}
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ne_click')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ne_click"  class="form-control" name="row[ne_click]" type="number" value="{$row.ne_click|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ne_source')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ne_source"  class="form-control" name="row[ne_source]" type="text" value="{$row.ne_source|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ne_author')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ne_author"  class="form-control" name="row[ne_author]" type="text" value="{$row.ne_author|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Weigh')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-weigh" class="form-control" name="row[weigh]" type="number" value="{$row.weigh|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

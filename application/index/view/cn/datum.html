@@ -1,0 +1,68 @@
+
+{extend name="./cn" /}
+
+{block name="title"}{$title}{/block}
+{block name="main"}
+
+<!-- 单张banner图 -->
+<div class="banner-wrap">
+    <a class="single-banner" href="javascript:;"><img src="{$cate['cu_image']}"></a>
+
+    <div class="heart font-line-wrap">
+        <div class="font-line">
+            {$cate['name']}
+        </div>
+    </div>
+</div>
+<!-- 单张banner图 -->
+<!-- 内容区域 -->
+<div class="item-content-wrap">
+    <div class="heart container doc">
+        <div class="row s-con-top">
+            <p class="col-xs-6 s-con-top-left">
+                <a href="/datum/cate_id/23" {if $cate_id==23} class="s-top-active"{/if}>书刊</a>
+                <a href="/datum/cate_id/24" {if $cate_id==24} class="s-top-active"{/if}>文章</a>
+                <a href="/datum/cate_id/25" {if $cate_id==25} class="s-top-active"{/if}>视频</a></p>
+            <p class="col-xs-6 s-con-top-right">
+                {foreach $yer as  $vo=>$k}
+                <a href="/datum/year/{$vo}" {if $year==$vo} class="s-top-active"{/if} >{$k}</a>
+                {/foreach}
+            </p>
+        </div>
+        {volist name="datum" id="vo"}
+        <div class="row s-con">
+            <div class="col-xs-12 col-sm-9 s-con-left">
+                <div class="row">
+                    <img class="col-xs-12 col-sm-5 s-left-img"
+                         src="{$vo.image}">
+                    <div class="col-xs-12 col-sm-7 s-con-info">
+                        <p class="s-con-info-title">{$vo.title}</p>
+                        <p class="s-con-info-introduce">{$vo.name}</p>
+                        <p class="s-con-info-synopsis">
+                            {$vo.brief}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 s-con-right">
+                <div class="bg">
+                    {if !$admin}
+                   <a href="javascript:;" title="登录" class="s-con-btn register">下载文件</a>
+
+                    {else}
+                    <a class="s-con-btn"
+                       href="{$vo.attachfile}">下载文件</a>
+                    {/if}
+
+                </div>
+            </div>
+        </div>
+
+    {/volist}
+
+
+    </div>
+</div>
+<!-- 内容区域 -->
+{/block}

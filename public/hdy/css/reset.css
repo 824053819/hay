@@ -1,0 +1,180 @@
+﻿body,
+ul,
+ol,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select,
+button,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+	font-size:12px;
+	font-family:Arial,Verdana,Tahoma,"微软雅黑","黑体";
+	background:#fff;
+	margin:0;
+	overflow-x:hidden;/*溢出隐藏，去掉水平方向的，直接剪裁*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+table {
+  font-size: inherit;
+}
+
+input,
+select {
+  font-family: arial, helvetica, clean, sans-serif;
+  font-size: 100%;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: normal;
+}
+
+button {
+  overflow: visible;
+}
+
+th,
+em,
+strong,
+b,
+address,
+cite {
+  font-style: normal;
+  font-weight: normal;
+}
+
+i,em{
+	font-style:normal;
+}
+
+a:link{
+	text-decoration:none; 
+	color:#000000;
+}
+a:visited{
+	text-decoration:none; 
+	color:#000000;
+}
+a:hover{
+	text-decoration:none; 
+	color:#000000;
+}
+a:active{
+	text-decoration:none; 
+	color:#000000;
+}
+
+li {
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+}
+
+img,
+fieldset {
+  border: 0 none;
+}
+
+ins {
+  text-decoration: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+a {
+  border: 0;
+  text-decoration: none;
+  color: #232323;
+}
+
+/*解决ie input框最后会有个× 只支持ie10+*/
+input:-ms-clear,
+input:-ms-reveal {
+  display: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+}
+
+/* 兼容IE低版本 */
+.clearfix {
+  *zoom: 1;
+}
+
+/* .clearfix:before,.clearfix:after{
+	display:table;
+	content:"";
+}
+.clearfix:after{
+	clear:both;
+}
+.clearfix {
+  *zoom: 1;
+} */ 
+/* 兼容IE低版本 */
+
+
+table{border-collapse:collapse;}
+
+
+.inline{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.tl {
+    text-align: left;
+}
+
+.tc {
+    text-align: center
+}
+
+.tr {
+    text-align: right;
+}

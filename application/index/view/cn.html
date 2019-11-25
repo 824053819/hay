@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>{block name="title"}首页{/block}</title>
+    <link rel="shortcut icon" href="/hdy/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/hdy/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="/hdy/css/reset.css">-->
+    <link rel="stylesheet" href="/hdy/css/iconfont.css">
+    <link rel="stylesheet" href="/hdy/css/index.css?1">
+</head>
+    <style>
+      .content p  img{
+            width: 100%;
+        }
+
+    </style>
+<script type="text/javascript" src="/hdy/js/jquery.min.js"></script>
+<script type="text/javascript" src="/hdy/js/tools.js"></script>
+<script type="text/javascript" src="/hdy/js/jquery-1.8.0.min.js"></script>
+
+<script src="/hdy/js/nav.js" type="text/javascript"></script>
+<style>
+
+
+    body {
+        font-family: "微软雅黑";
+    }
+
+
+
+
+    @media (max-width: 1366px) {
+        .banner {
+            height: 580px;
+            background-position: center center;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .banner {
+            height: 570px;
+            max-width: 100%;
+        }
+    }
+
+
+
+
+    .F_share .bdsharebuttonbox a {
+
+        width: 17px;
+        height: 16px;
+        display: inline-block;
+        margin: 6px 1px;
+        float: right;
+    }
+
+    .F_share .bdsharebuttonbox .bds_fbook {
+        background: url(/hdy/img/01ico.png) no-repeat 20% center;
+    }
+
+    .F_share .bdsharebuttonbox .bds_twi {
+        background: url(/hdy/img/02ico.png) no-repeat 20% center;
+    }
+
+    .F_share .bdsharebuttonbox .bds_linkedin {
+        background: url(/hdy/img/03ico.png) no-repeat 20% center;
+    }
+
+    .F_share .bdsharebuttonbox .bds_weixin {
+        background: url(/hdy/img/04ico.png) no-repeat 20% center;
+    }
+
+    .F_share .bdsharebuttonbox .bds_tsina {
+        background: url(/hdy/img/05ico.png) no-repeat 20% center;
+    }
+
+    .F_share .bdsharebuttonbox .bds_mail {
+        background: url(/hdy/img/06ico.png) no-repeat 20% center;
+    }
+    .share_icon {
+        position: relative;
+    }
+    .dengluNone {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        z-index: 5;
+    }
+</style>
+<script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "2",
+            "bdMiniList": false,
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "32"
+        },
+        "share": {}
+    };
+    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement(
+        'script')).src =
+        'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(
+        -new Date() / 36e5)];
+</script>
+<body>
+<!-- 最外层盒子 -->
+<div class="index-chines">
+    <!-- 分享条 -->
+    <div class="share_wrap">
+        <div class="heart clearfix">
+            <ul class="fr share_ul  F_share R">
+                <li class="fl share_icon Facebook bdsharebuttonbox" ><a class="bds_fbook" data-cmd="fbook" href="#"></a></li>
+                <li class="fl share_icon Twitter bdsharebuttonbox"><a href="javascript:;" class="bds_twi" data-cmd="twi" title="Share Twitter"></a></li>
+                <li class="fl share_icon linkedin bdsharebuttonbox"><a href="javascript:;" title="Share linkedin" class="bds_linkedin" data-cmd="linkedin"></a></li>
+                <li class="fl share_icon wechat bdsharebuttonbox"><a href="javascript:;" class="bds_weixin" data-cmd="weixin" title="Share wechat"></a></li>
+                <li class="fl share_icon sina bdsharebuttonbox" class="bdsharebuttonbox"><a  class="bds_mail" data-cmd="mail" title="Share sina"></a></li>
+                <li class="fl share_icon mail bdsharebuttonbox"><a href="javascript:;" class="bds_tsina" data-cmd="tsina" title="Share Mail"></a></li>
+                {if !$admin}
+                <li class="fl share_icon register"><a href="javascript:;" title="登录">登录</a></li>
+
+                {else}
+                <li class="fl share_icon"><a class="dengluLi" href="javascript:;" title="{$admin['username']}">{$admin['username']}</a>
+                    <div class="dengluNone" style="width:80px;">
+                        <a href="/message">个人信息</a>
+                        <a href="/out" type="button">退出</a>
+                    </div>
+                    <script>
+                        var dengluLi = document.getElementsByClassName("dengluLi")[0];
+                        dengluLi.onclick = function(){
+                            if((getStyle(document.getElementsByClassName("dengluNone")[0],'display') == "none")){
+                                document.getElementsByClassName("dengluNone")[0].style.display = "block";
+                            } else {
+                                document.getElementsByClassName("dengluNone")[0].style.display = "none";
+
+                            }
+                        }
+
+                        function getStyle(obj,attr) {
+                            if(window.getComputedStyle) {
+                                return getComputedStyle(obj)[attr];
+                            } else {
+                                return obj.currentStyle[attr];
+                            }
+                        }
+                    </script>
+                </li>
+
+
+                {/if}
+
+                <li class="fl dropdown">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">中文</a>
+                    <ul class="dropdown-menu dropdown-menu-left">
+                        <li><a href="/indexcn">中文</a></li>
+                        <li><a href="/indexen">ENGLISH</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 分享条 -->
+
+    <!-- 导航条 -->
+    <div class="nav-wrap">
+        <div class="nav heart clearfix">
+            <div class="logo-wrap fl">
+                <a class="logo fl" href="/indexcn"><img src="/hdy/img/logo.png" alt=""></a>
+                <div class="line-close fr">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="Links-wrap fr">
+                <ul class="Links fl">
+                    <li class="link-li fl">
+                        <div class="link-title">关于我们</div>
+                        <ul class="link-none clearfix">
+                            <li class="fl"><a href="/introduce">航都院（中国）</a></li>
+                            <li class="fl"><a href="/team/id/15">专家委员会</a></li>
+                            <li class="fl"><a href="/team/id/14">核心团队</a></li>
+                        </ul>
+                    </li>
+                    <li class="link-li fl">
+                        <div class="link-title">航空大都市</div>
+                        <ul class="link-none clearfix">
+                            <li class="fl"><a href="/expert/id/2">约翰·卡萨达</a></li>
+                            <li class="fl"><a href="/theory">航空大都市理论</a></li>
+                            <li class="fl"><a href="/datum">科学文献</a></li>
+                        </ul>
+                    </li>
+                    <li class="link-li fl">
+                        <div class="link-title">我们的项目</div>
+                        <ul class="link-none clearfix">
+                            <li class="fl"><a href="/caselist/id/16">服务</a></li>
+                            <li class="fl"><a href="/regions">足迹</a></li>
+                            <li class="fl"><a href="/caselist/id/17">案例</a></li>
+                        </ul>
+                    </li>
+                    <li class="link-li fl bg-blank">
+                        <div class="link-title">
+                            <a href="/newslist">新闻动态</a>
+                        </div>
+                    </li>
+                    <li class="link-li fl">
+                        <div class="link-title">加入我们</div>
+                        <ul class="link-none clearfix">
+                            <li class="fl"><a href="/aic">加入AIC</a></li>
+                            <li class="fl"><a href="/women">联系我们</a></li>
+                        </ul>
+                    </li>
+                    <li class="link-li fl bg-blank nav-form">
+                        <form action="/search" method="post" name="search">
+                            <table border="0" align="center" cellspacing="0" class="tab_search">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="text" name="conten" title="Search" class="searchinput"
+                                               id="searchinput" onkeydown="if (event.keyCode==13) {}"
+                                               onblur="if(this.value=='')value='Search...';"
+                                               onfocus="if(this.value=='Search...')value='';" value="Search...">
+                                    </td>
+                                    <td>
+                                        <input type="image" class="searchaction"
+                                               onclick="if(document.forms['search'].searchinput.value=='- Search Products -')document.forms['search'].searchinput.value='';"
+                                               alt="Search" src="http://www.aicthink.com/images/icosousuo.png"
+                                               border="0" hspace="2">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </li>
+                </ul>
+                <!-- 登陆的 分享注册 切换 -->
+                <div class="phone-wrap fl">
+                    {if !$admin}
+                    <p class="phone-register register"><a href="javascript:;">登&nbsp;&nbsp;录</a>
+                        </p>
+                    {else}
+                    <p class="phone-register"><a href="/message">{$admin['username']}</a><a href="/out" type="button">[退出]</a></p>
+                    {/if}
+                    <p class="phone-cut"><a class="active" href="/indexcn">中文</a><em>|</em><a href="/indexen">EN</a></p>
+
+
+                    <div class="bdsharebuttonbox share1 bdshare-button-style0-32" data-bd-bind="1569813708978">
+                        <a class="bds_fbook" data-cmd="fbook" href="#" title="分享到Facebook"></a>
+                        <a class="bds_twi" data-cmd="twi" href="#" title="分享到Twitter"></a>
+                        <a class="bds_linkedin" data-cmd="linkedin" href="#" title="分享到linkedin"></a>
+                        <a class="bds_weixin" data-cmd="weixin" href="#" title="分享到微信"></a>
+                        <a class="bds_tsina" data-cmd="tsina" href="#" title="分享到新浪微博"></a>
+                        <a class="bds_mail" data-cmd="mail" href="#" title="分享到邮件分享"></a>
+                    </div>
+                    <!-- <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "32" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+     -->
+                </div>
+            </div>
+        </div>
+        <div id="nav_two_bg"></div>
+    </div>
+    {block name="main"}主内容{/block}
+    <!-- 内容区域 -->
+    <div class="footer-wrap">
+        <div class="footer">
+            <p>航都院<sup>®</sup>（中国）</p>
+            <p>
+                <a href="/introduce">关于我们</a> l <a
+                    href="/theory">航空大都市</a>l
+                 <a href="/caselist/id/17">我们的项目</a> l<a
+                    href="/newslist"> 新闻动态</a> l <a
+                    href="/aic">加入我们</a>
+            </p>
+            <p>
+                ©2016- 2025, all rights reserved. Privacy Policy
+            </p>
+        </div>
+    </div>
+
+</div>
+
+    <script src="/hdy/js/jq341.js"></script>
+    <script src="/hdy/js/bootstrap.min.js"></script>
+
+    <script>
+        var index = true;
+        var logindiv=`
+<div class="tan l">
+    <div class="box" style="background-image:url(/hdy/img/loginupload.jpg)">
+        <div class="form">
+            <h3 style="width:50px; float:left;">登录</h3>
+            <span class="close" style="padding-right:45px; color:#3882af; font-size:20px;">✖</span>
+            <form id="loginForm name="loginForm"
+                style="margin-top:80px;text-indent:1em;">
+                <input type="text" name="userid" id="username" placeholder="姓名或邮箱地址" />
+                <input type="password" name="pwd" id="pwd" placeholder="密码" />
+                <div class="error"></div>
+                <p class="reg">
+                    <button type="submit" id="loginUser"
+                        style="background:url(/hdy/img/login.png); width:116px; height:46px;border:0;"></button>
+                    <a href="javascript:;" class="btn-reg">
+                        <img src="/hdy/img/zhuce.png">
+                    </a>
+
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+`;
+        // type="submit"
+        // action="/member/index_do.php" method="POST"
+        var zhucediv=`
+<div class="tan r">
+    <div class="box boxzc" style="background-image:url(/hdy/img/loginupload2.jpg)">
+        <div class="form">
+            <h3 style="width:50px; float:left;">注册</h3>
+            <span class="close" style="padding-right:45px; color:#3882af; font-size:20px;">✖</span>
+            <div style="width:100%;overflow: hidden; padding-top:50px">
+                <form method="post" action="/member/reg_new.php" id="regUser" name="form2"
+                    style="margin-top:12px;text-indent:1em;">
+                    <input type="text" id="txtUsername" name="userid" placeholder="姓名"
+                        style="width:192px; float:left">
+                    <input type="text" size="20" id="uname" name="uname" placeholder="姓"
+                        style="width:192px; float:right">
+                    <input type="password" id="txtPassword" name="userpwd" placeholder="密码"
+                        style="width:192px; float:left">
+                    <input type="password" size="20" value="" id="userpwdok" name="userpwdok" placeholder="确认密码"
+                        style="width:192px; float:right">
+                    <input type="text" class="intxt w200" id="email" name="email" placeholder="电子邮箱"
+                        style="width:192px; float:left">
+
+                </form>
+            </div>
+            <div class="error" style="width:100%; overflow: hidden"></div>
+
+            <div
+                style="padding-top:30px;padding-bottom:14px; border-bottom:1px solid #f0f0f0; height:60px; width:400px;font-size:16px; float:left; left:1px; margin:0 auto; text-align:left;overflow: hidden; ">
+                订阅我们的新闻与动态</div>
+            <div style="margin-top:38px; text-align:left ; padding-top:29px; font-size: 16px;"><input type="checkbox">&nbsp;AIC新闻动态
+                <input type="checkbox" style=" margin-left:55px;"> 科研文献</div>
+            <div style="padding-top:20px;">
+                <button type="submit" id="btnSignCheck"><img
+                        src="/hdy/img/zhuce2.png"></button>
+                <a href="javascript:;" class="tiyan"><img src="/hdy/img/denglu2.png"></a>
+            </div>
+        </div>
+    </div>
+</div>
+`;
+
+
+        $(".index-chines").append(logindiv);
+        $(".index-chines").append(zhucediv);
+
+
+        $(".register").click(function(){
+
+            $(".l").css("display", "block");
+            if(docWidth < 750){
+                $(".tan .box .form").css({"width": "90%","margin":"0 auto"});
+                $(".tan .boxzc .form").css({"height": "500px"});
+                $(".tan .boxzc .form form input").css({"float": "left"});
+            }
+
+// alert('awdawdadad');
+        });
+
+        $(".close").click(function () {
+            $(".l").css("display", "none");
+            $(".r").css("display","none");
+        });
+
+        $(".btn-reg").click(function () {
+            $(".l").css('display', "none");
+            $(".r").css("display","block");
+        });
+        $(".tiyan").click(function(){
+            $(".r").css("display","none");
+            $(".l").css('display', "block");
+        });
+
+
+        // $(function ())是文档document加载完自动调用的函数
+        // $(function () {
+        //     /*
+        //      获取form元素，调用其ajaxForm(...)方法
+        //      内部的function(data)的data就是后台返回的数据
+        //     */
+        //     $("#userlogin").ajaxForm(function (data) {
+        //             console.log(data);
+        //             console.log("str:" + JSON.stringify(data));
+        //         }
+        //     );
+        // });
+        //注册
+        $("#btnSignCheck").click(function() {
+            var formObject = {};
+            var formArray =$("#regUser").serializeArray();
+            $.each(formArray,function(i,item){
+                formObject[item.name] = item.value;
+            });
+            $.ajax({
+                url:"/login",
+                type:"post",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(formObject),
+                dataType: "json",
+                success:function(data){
+                    if(data.code){
+                        alert(data.msg);
+
+                    }else{
+                        alert(data.msg);
+                    }
+                },
+                error:function(e){
+                    alert("错误！！");
+                }
+            });
+            return false;
+        });
+        //登录
+        $("#loginUser").click(function() {
+            var data={};
+            data['pwd'] = $('#pwd').val();
+            data['userid'] = $('#username').val();
+
+            // console.log(pwd);
+            $.ajax({
+                url:"/logon",
+                type:"post",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(data),
+                dataType: "json",
+                success:function(data){
+
+                    if(data.code){
+                        alert(data.msg);
+                    }else{
+                        alert(data.msg);
+                        window.location.reload();
+
+                    }
+                },
+                error:function(e){
+                    alert("错误！！");
+                }
+            });
+            return false;
+        });
+    </script>
+    <script src="/hdy/js/index.js?5"></script>
+<!--    <script>
+
+        $(".register").click(function(){
+            /*
+                $(".l").css("display", "block");
+            */
+            alert('awdawdadad');
+        });
+    </script>-->
+</body>
+
+</html>

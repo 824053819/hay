@@ -1,0 +1,84 @@
+
+{extend name="./cn" /}
+
+{block name="title"}{$title}{/block}
+{block name="main"}
+<!-- 导航条 -->
+<p class="Experts_title heart">{$team.te_name}</p>
+<!-- 内容区域 -->
+<div class="item-content-wrap Experts_item">
+    <div class="heart container">
+        <div class="row">
+            <div class="col-sm-9 col-xs-12 cont-left">
+                <div class="content clearfix">
+                    <img class="Experts_item_img_left" src="{$team.te_image}">
+                    <p class="Experts_item_info">
+                        {volist name="team.te_label" id="vo"}
+                        <span>{$vo}</span><br><br>
+                        {/volist}
+                        {$team.te_content}
+                    </p>
+                    <img class="Experts_item_img_right" src="">
+                </div>
+            </div>
+
+
+            <div class="col-sm-3 col-xs-12 cont-right">
+                <p style="font-weight: bold;">联系方式</p>
+                <p class="item-emil">{$team.te_email}</p>
+                <p class="item-phone">{$team.te_phone}</p>
+                <p class="color114" style="font-weight:bold;">推荐阅读</p>
+                {volist name="news" id="vo"}
+                <p>
+                    <img class="ico1" src="/hdy/img/ico1.png"> <a href="/newsxq/id/{$vo.ne_id}">{$vo.ne_title}</a></p>
+                {/volist}
+                {volist name="casean" id="vo"}
+                <p>
+                    <img class="ico1" src="/hdy/img/ico1.png"> <a href="/casean/id/{$vo.cd_id}">{$vo.cd_title}</a></p>
+                {/volist}
+
+                <p class="more color114"><span>查看更多</span></p>
+
+                <p class="share color114">分享</p>
+                <div class="bdsharebuttonbox bdshare-button-style0-32" style="height:30px"
+                     data-bd-bind="1567499941050">
+                    <a class="bds_fbook" style="background:url(/hdy/img/ico2_01.png); width:34px; height:30px;"
+                       data-cmd="fbook" href="#" title="分享到Facebook"></a>
+                    <a class="bds_twi" style="background:url(/hdy/img/ico2_02.png); width:34px; height:30px;"
+                       data-cmd="twi" href="#" title="分享到Twitter"></a>
+                    <a class="bds_linkedin"
+                       style="background:url(/hdy/img/ico2_03.png); width:34px; height:30px;"
+                       data-cmd="linkedin" href="#" title="分享到linkedin"></a>
+                    <a class="bds_weixin"
+                       style="background:url(/hdy/img/ico2_04.png); width:34px; height:30px;"
+                       data-cmd="weixin" href="#" title="分享到微信"></a>
+                    <a class="bds_tsina" style="background:url(/hdy/img/ico2_05.png); width:34px; height:30px;"
+                       data-cmd="tsina" href="#" title="分享到新浪微博"></a>
+                    <a class="bds_mail" style="background:url(/hdy/img/ico2_06.png); width:34px; height:30px;"
+                       data-cmd="qzone" href="#" title="分享到QQ空间"></a></div>
+                <script>
+                    window._bd_share_config = {
+                        "common": {
+                            "bdSnsKey": {},
+                            "bdText": "",
+                            "bdMini": "2",
+                            "bdMiniList": false,
+                            "bdPic": "",
+                            "bdStyle": "0",
+                            "bdSize": "32"
+                        },
+                        "share": {}
+                    };
+                    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement(
+                        'script')).src =
+                        'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(
+                        -new Date() / 36e5)];
+                </script>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 内容区域 -->
+
+{/block}

@@ -1,0 +1,454 @@
+/* 公共样式表css */
+html,body {
+    color: #333;
+    margin: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+img {
+    border: 0;
+}
+
+
+
+button {
+    outline: 0;
+}
+
+img {
+    border: 0;
+}
+
+
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #666;
+}
+
+a:hover {
+    color: #eee;
+}
+
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+}
+
+/* 必要布局样式css */
+.map-content {
+    padding: 0px 0;
+	margin: 0;
+}
+
+.map-module {
+    width: 1100px !important;
+    margin: 0 auto;
+    position: relative;
+    transition: all .3s ease;
+
+}
+
+.map-title {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin: 50px 0;
+    position: relative;
+}
+
+.map-branch .map-title {
+    margin: 20px 0 0;
+    z-index: 1;
+}
+
+.map-title:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -23px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid;
+    border-color: #20B09F transparent transparent;
+}
+
+.map-title:after {
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 3px;
+    background-color: #20B09F;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.map-content-info {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.branch-map-l {
+    width: 1100px;
+    height: 613px;
+    position: relative;
+}
+
+.map-content-box {
+    width: 100%;
+    height: 100%;
+    background: url("/hdy/img/map-bj.png") no-repeat center;
+    position: relative;
+}
+
+.map-dot {
+	position: absolute;
+	text-align: center;
+	font-size: 12px;
+	cursor: pointer;
+	z-index: 99;
+	left: 430px;
+	top: 57px;
+}
+
+.beijing {
+    left: 585px;
+    top: 220px;
+}
+
+.tianjin {
+	left: 758px;
+	top: 150px;
+}
+
+.hebei {
+    left: 575px;
+    top: 254px;
+}
+
+.shanxi {
+    left: 540px;
+    top: 276px;
+}
+
+.liaoning {
+    left: 660px;
+    top: 196px;
+}
+
+.jilin {
+    left: 696px;
+    top: 167px;
+}
+
+.heilongjiang {
+	left: 468px;
+	top: 132px;
+}
+
+.shanghai {
+    left: 668px;
+    top: 341px;
+}
+
+.jiangsu {
+	left: 876px;
+	top: 228px;
+}
+
+.zhejiang {
+	left: 878px;
+	top: 259px;
+}
+
+.anhui {
+	left: 858px;
+	top: 239px;
+}
+
+.fujian {
+	left: 853px;
+	top: 260px;
+}
+
+.jiangxi {
+	left: 836px;
+	top: 254px;
+}
+
+.shandong {
+	left: 882px;
+	top: 199px;
+}
+
+.henan {
+	left: 845px;
+	top: 207px;
+}
+
+.hubei {
+	left: 730px;
+	top: 270px;
+}
+
+.hunan {
+    left: 545px;
+    top: 409px;
+}
+
+.guangdong {
+	left: 645px;
+	top: 254px;
+}
+
+.guangxi {
+	left: 155px;
+	top: 207px;
+}
+
+.chongqing {
+    left: 495px;
+    top: 364px;
+}
+
+.sichuan {
+    left: 425px;
+    top: 354px;
+}
+
+.guizhou {
+    left: 484px;
+    top: 424px;
+}
+
+.yunnan {
+	left: 87px;
+	top: 198px;
+}
+
+.shanxi1 {
+    left: 502px;
+    top: 312px;
+}
+.jia1 {
+	left: 884px;
+	top: 159px;
+}
+.jia2 {
+	left: 854px;
+	top: 178px;
+}
+.jia3 {
+	left: 714px;
+	top: 193px;
+}
+.jia4 {
+	left: 849px;
+	top: 251px;
+}
+.jia5 {
+	left: 823px;
+	top: 290px;
+}
+.jia6 {
+	left: 831px;
+	top: 300px;
+}
+.jia7 {
+	left: 842px;
+	top: 368px;
+}
+.jia8 {
+	left: 703px;
+	top: 312px;
+}
+.jia9 {
+	left: 822px;
+	top: 327px;
+}
+.jia10 {
+	left: 732px;
+	top: 240px;
+}
+.jia11 {
+	left: 568px;
+	top: 451px;
+}
+.jia12 {
+	left: 555px;
+	top: 451px;
+}
+.jia13 {
+	left: 560px;
+	top: 118px;
+}
+.jia14 {
+	left: 300px;
+	top: 403px;
+}
+.jia15 {
+	left: 170px;
+	top: 310px;
+}
+.jia16 {
+	left: 170px;
+	top: 200px;
+}
+.jia17 {
+	left: 195px;
+	top: 169px;
+}
+.jia18 {
+	left: 235px;
+	top: 155px;
+}
+.jia19 {
+	left: 178px;
+	top: 180px;
+}
+.jia20 {
+	left: 193px;
+	top: 192px;
+}
+.map-dot:after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 0 auto;
+    background-color: #3882af;
+    border-radius: 50%;
+}
+
+.map-dot.beijing:after {
+    width: 13px;
+    height: 12px;
+    border-radius: 0;
+    background: url("/hdy/img/icon-star.png") no-repeat center;
+}
+
+.branch-map-data {
+    position: absolute;
+    box-sizing: border-box;
+    width: 226px;
+	height:310px;
+    background-color: #fff;
+    padding: 5px 30px;
+    z-index: 1;
+    display: none;
+	background: url("/hdy/img/beijing1.png") no-repeat center;
+	margin-left:-40px;
+}
+
+
+
+.branch-map-data-title p {
+    font-size: 18px;
+	width:350px;
+    color: #333;
+    line-height: 18px;
+	padding-left:32px;
+	margin: 0;
+	text-decoration: none;
+}
+
+.branch-map-data-info {
+    max-height: 266px;
+	width:300px;
+    overflow-y: auto;
+	padding-left:33px;
+	margin: 0;
+	text-decoration: none;
+}
+.branch-map-data-info a{
+	text-decoration: none;
+}
+.data-branch {
+    border-bottom: 1px dashed #eee;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.data-branch:last-child {
+    border: none;
+}
+
+button, input, textarea {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.data-branch .data-name {
+    font-size: 14px;
+    color: #666;
+    line-height: normal;
+    margin-bottom: 5px;
+	margin: 0;
+}
+
+.data-branch p {
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+}
+
+
+.branch-map-data:before {
+
+}
+
+.branch-map-data:after {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border: 8px solid;
+    border-color: transparent #fff transparent transparent;
+}
+
+.map-dot.cur:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #01B7BD;
+    animation: dot 4s infinite;
+}
+
+@keyframes dot {
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.5);
+        opacity: .1;
+    }
+}

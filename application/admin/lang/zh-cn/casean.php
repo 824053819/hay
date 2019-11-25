@@ -1,0 +1,31 @@
+<?php
+
+return [
+    'Cd_id'                => '主键',
+    'Category_id'          => '分类ID',
+    'Cd_title'             => '标题',
+    'Cd_images'            => '轮播多图',
+    'Cd_brief'             => '简介',
+    'Cd_content'           => '内容',
+    'Cd_times'             => '项目时间',
+    'Createtime'           => '添加时间',
+    'Updatetime'           => '修改时间',
+    'Status'               => '状态',
+    'Status 0'             => '隐藏',
+    'Status 1'             => '正常',
+    'Status 2'             => '推荐	',
+    'Cd_click'             => '点击量',
+    'Cd_site'              => '项目地点',
+    'Cd_scope'             => '规划范围',
+    'Weigh'                => '权重',
+    'Category.pid'         => '父ID',
+    'Category.type'        => '栏目类型',
+    'Category.image'       => '图片',
+    'Category.keywords'    => '关键字',
+    'Category.description' => '描述',
+    'Category.diyname'     => '自定义名称',
+    'Category.createtime'  => '创建时间',
+    'Category.updatetime'  => '更新时间',
+    'Category.weigh'       => '权重',
+    'Category.status'      => '状态'
+];

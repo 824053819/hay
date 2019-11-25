@@ -1,0 +1,105 @@
+{extend name="./en" /}
+
+{block name="title"}{$title}{/block}
+{block name="main"}
+<!-- 单张banner图 -->
+<div class="banner-wrap">
+    <a class="single-banner" href="javascript:;"><img src="{$cate.cu_image}"></a>
+    <div class="heart font-line-wrap">
+        <div class="font-line">
+            {$cate.name}
+        </div>
+    </div>
+</div>
+<!-- 单张banner图 -->
+<!-- 内容区域 -->
+<div class="item-content-wrap">
+    <div class="heart container">
+        <div class="row">
+            <div class="col-sm-9 col-xs-12 cont-left">
+
+                <div class="content">
+                    {$cate.cu_content}
+                </div>
+                <div class="content">
+                    <p class="content-title">Who We Are</p>
+                    <p>A.I.C. is backed by the A.I. International Advisory Panel, a group of highly experienced, multidisciplinary talents from different regions, providing the most professional consulting services for the development of airport integrated areas.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12">
+                            <div class="content-item">
+                                <p class="content-item-title">World Leading Intellectual Resources</p>
+                                <p>Our experts represent various fields of expertise, such as airport operation and management, urban planning, aviation logistics, industrial design and development. Experts will work together and provide comprehensive, cross-disciplinary consulting services and introduce a variety of resources.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12">
+                            <div class="content-item">
+                                <p class="content-item-title">Customized Services for Chinese Market</p>
+                                <p>A.I.C. provides customized analysis, insights, and advice on all aspects of airport city and Aerotropolis development mainly in China and Asia-Pacific by adopting a unique, efficient and practical methodology integrating “strategy planning, industry planning and spatial&emsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="content-title">Our Network</p>
+                    <p>
+                        A.I.C. provides consulting services to governments, companies and public organizations. So far, A.I.C. has already provided comprehensive solutions to nearly 100 countries and regions around the world to help clients achieve sustainable economic development, investment attraction, and industrial transformation. Backed by top-notched fellow experts, A.I.C. partners with clients from public and private sectors and is able to offer tailored solutions to our clients and help them build high-quality, vibrant and highly competitive Aerotropolis/airport cities.                    </p>
+                </div>
+                <img class="col-xs-12" src="/hdy/img/are.png">
+            </div>
+
+            <div class="col-sm-3 col-xs-12 cont-right">
+                <p class="color114" style="font-weight:bold;">Recommend</p>
+                {volist name="news" id="vo"}
+                <p>
+                    <img class="ico1" src="/hdy/img/ico1.png"> <a href="/newsxqe/id/{$vo.ne_id}">{$vo.ne_title}</a></p>
+                {/volist}
+                {volist name="casean" id="vo"}
+                <p>
+                    <img class="ico1" src="/hdy/img/ico1.png"> <a href="/caseane/id/{$vo.cd_id}">{$vo.cd_title}</a></p>
+                {/volist}
+
+                <p class="more color114"><span>More</span></p>
+
+                <p class="share color114">Share</p>
+                <div class="bdsharebuttonbox bdshare-button-style0-32" style="height:30px"
+                     data-bd-bind="1567499941050">
+                    <a class="bds_fbook" style="background:url(/hdy/img/ico2_01.png); width:34px; height:30px;"
+                       data-cmd="fbook" href="#" title="分享到Facebook"></a>
+                    <a class="bds_twi" style="background:url(/hdy/img/ico2_02.png); width:34px; height:30px;"
+                       data-cmd="twi" href="#" title="分享到Twitter"></a>
+                    <a class="bds_linkedin"
+                       style="background:url(/hdy/img/ico2_03.png); width:34px; height:30px;"
+                       data-cmd="linkedin" href="#" title="分享到linkedin"></a>
+                    <a class="bds_weixin"
+                       style="background:url(/hdy/img/ico2_04.png); width:34px; height:30px;"
+                       data-cmd="weixin" href="#" title="分享到微信"></a>
+                    <a class="bds_tsina" style="background:url(/hdy/img/ico2_05.png); width:34px; height:30px;"
+                       data-cmd="tsina" href="#" title="分享到新浪微博"></a>
+                    <a class="bds_mail" style="background:url(/hdy/img/ico2_06.png); width:34px; height:30px;"
+                       data-cmd="qzone" href="#" title="分享到QQ空间"></a></div>
+                <script>
+                    window._bd_share_config = {
+                        "common": {
+                            "bdSnsKey": {},
+                            "bdText": "",
+                            "bdMini": "2",
+                            "bdMiniList": false,
+                            "bdPic": "",
+                            "bdStyle": "0",
+                            "bdSize": "32"
+                        },
+                        "share": {}
+                    };
+                    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement(
+                        'script')).src =
+                        'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(
+                        -new Date() / 36e5)];
+                </script>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{/block}

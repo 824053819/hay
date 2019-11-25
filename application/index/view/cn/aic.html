@@ -1,0 +1,124 @@
+
+{extend name="./cn" /}
+
+{block name="title"}{$title}{/block}
+{block name="main"}
+<!-- 单张banner图 -->
+<div class="banner-wrap">
+    <a class="single-banner" href="javascript:;"><img src="{$cate.cu_image}"></a>
+
+    <div class="heart font-line-wrap">
+        <div class="font-line">
+            {$cate.name}
+        </div>
+    </div>
+</div>
+<!-- 单张banner图 -->
+<!-- 内容区域 -->
+<div class="item-content-wrap join_us_wrap">
+    <div class="heart container">
+        <div class="row">
+            <div class="col-sm-9 col-xs-12 cont-left">
+                <div class="content">
+                    {$cate.cu_content}
+                </div>
+                <div class="content">
+                    <p class="content-title">我们选择谁</p>
+                    <p>在AIC，我们选用有活力、有激情、有思想以及有合作精神的员工。</p><br>
+
+                    <p>  我们从中国和国外顶级的大学招聘员工，90％的员工均为不同领域的硕士研究生，其中包括牛津大学、北卡罗来纳大学教堂山分校、复旦大学、南京大学等；我们还聘请在行业内部具有丰富经验的高净值人才以及具有国际影响力的专家学者；我们还需要非常优秀的城市规划、平面设计等专业人才，需要这些人才支持AIC的运转。</p><br>
+
+                    <p>   AIC中意的人才需要在专业和教育方面有优异的表现，拥有强烈的求知欲，能够提供独到的见解并主动解决问题。同时具有较高的专注力，享受团队工作，拥有出众的团队合作能力。</p>
+                </div>
+                <div class="content">
+                    <p class="content-title">AIC生活</p>
+                    <p>
+                        无论在工作内外，我们都重视你所创造的价值。为了更好地平衡您的工作和生活，AIC为你准备了优厚的福利计划。</p>
+                    <div class="row welfare">
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="join_us_title">项目奖金<span></span></div>
+                            <p>AIC会根据你参与项目的职责分工及工作表现，以企业年金的形式发放项目奖励。</p>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="join_us_title">卫生和健康计划<span></span></div>
+                            <p>AIC会为每一位员工提供年度健康体检福利。 </p>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="join_us_title">五险一金<span></span></div>
+                            <p>按国家规定的最高比例缴纳养老、失业、医疗、工伤、生育等保险和住房公积金。</p>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="join_us_title">员工生活福利计划<span></span></div>
+                            <p>为AIC的员工提供包括交通补贴、通讯补贴、住房补贴、用餐补贴、节日福利、生日贺礼、结婚贺礼、生育贺礼、加班补助、降温采暖费在内的全方位的员工生活福利。</p>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="join_us_title">年假福利<span></span></div>
+                            <p>根据你的累计工作年限，AIC为你提供5-15天的带薪年假。当然，如果你在本年度因工作原因没有休假，AIC会根据国家规定的补偿标准发放年假薪资。 </p>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="join_us_title">企业文化生活<span></span></div>
+                            <p>AIC每月会为我们的员工提供电影票1张；在春季会组织员工进行近郊踏春活动，在秋季重阳节前后会带领员工进行登山活动；在元宵节等传统节日时，我们还会为AIC的员工送上趣味主题活动。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="content-title">如何申请加入AIC</p>
+                    <p>
+                        你需要通过电子邮件的形式，将自己的简历投递至邮箱进行报名。并将电子版的相关证明、证件，如毕业证、学位证、外语资格证书、专业技术任职资格证书、执业资格证书、任职证明、近年来主要工作业绩及获奖证明材料等一并附上，这将作为我们选择的参考标准。 </p>
+
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-xs-12 cont-right">
+                <p style="font-weight:bold;">职位开放</p>
+                {volist name="category" id="vo"}
+                <p><a href="/position/id/{$vo.id}">{$vo.name}</a></p>
+                {/volist}
+                <p style="font-weight:bold; margin-top: 20px;">简历投递</p>
+                <p>邮箱-aic@aicthink.com</p>
+                <p style="font-weight:bold; margin-top: 20px;">咨询</p>
+                <p>0371-56923581</p>
+
+
+
+                <p class="share color114">分享</p>
+                <div class="bdsharebuttonbox bdshare-button-style0-32" style="height:30px"
+                     data-bd-bind="1567499941050">
+                    <a class="bds_fbook" style="background:url(/hdy/img/ico2_01.png); width:34px; height:30px;"
+                       data-cmd="fbook" href="#" title="分享到Facebook"></a>
+                    <a class="bds_twi" style="background:url(/hdy/img/ico2_02.png); width:34px; height:30px;"
+                       data-cmd="twi" href="#" title="分享到Twitter"></a>
+                    <a class="bds_linkedin"
+                       style="background:url(/hdy/img/ico2_03.png); width:34px; height:30px;"
+                       data-cmd="linkedin" href="#" title="分享到linkedin"></a>
+                    <a class="bds_weixin"
+                       style="background:url(/hdy/img/ico2_04.png); width:34px; height:30px;"
+                       data-cmd="weixin" href="#" title="分享到微信"></a>
+                    <a class="bds_tsina" style="background:url(/hdy/img/ico2_05.png); width:34px; height:30px;"
+                       data-cmd="tsina" href="#" title="分享到新浪微博"></a>
+                    <a class="bds_mail" style="background:url(/hdy/img/ico2_06.png); width:34px; height:30px;"
+                       data-cmd="qzone" href="#" title="分享到QQ空间"></a></div>
+                <script>
+                    window._bd_share_config = {
+                        "common": {
+                            "bdSnsKey": {},
+                            "bdText": "",
+                            "bdMini": "2",
+                            "bdMiniList": false,
+                            "bdPic": "",
+                            "bdStyle": "0",
+                            "bdSize": "32"
+                        },
+                        "share": {}
+                    };
+                    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement(
+                        'script')).src =
+                        'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(
+                        -new Date() / 36e5)];
+                </script>
+
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

@@ -1,0 +1,74 @@
+{extend name="./cn" /}
+
+{block name="title"}{$title}{/block}
+{block name="main"}
+
+<!-- banner图 -->
+<div class="banner-wrap index-banner">
+    <ul class="banner-ul clearfix">
+        {volist name="data" id="vo"}
+        <li class="fl" style="float: left; position: relative;">
+            <a href="{$vo.sl_link}"><img src="{$vo.sl_image}"></a>
+            <div class="" style=" display: none;width: 100%; position: absolute; bottom: 100px; left: 0; text-align: center;">
+                <span class="SIYUANFont"  style="font-size: 30px; color: #ffffff;">{$vo.sl_title}</span>
+            </div>
+        {/volist}
+    </ul>
+    <div class="dot-wrap">
+        <ul class="banner-dot">
+            <!-- 点的li在js动态创建 -->
+        </ul>
+    </div>
+    <span class="banner-prev"><img src="/hdy/img/prve.png"></span>
+    <span class="banner-next"><img src="/hdy/img/next.png"></span>
+</div>
+<!-- banner图 -->
+<!-- 内容区域 -->
+<div class="content-wrap">
+    <div class="content heart container">
+        <div class="row">
+            {volist name="news" id="vo"}
+            <div class="col-sm-3 col-xs-12">
+                <div class="col-con">
+                    <p class="con-title">新闻动态</p>
+                    <a class="con-item" href="/newsxq/id/{$vo.ne_id}">
+                        <img class="index-img" height="200px" src="{if $vo.ne_image}{$vo.ne_image}{else}/hdy/img/beiyong.gif{/if}">
+                        <div class="item-info">
+                            <p class="info-title line2">
+                                {$vo.ne_title}
+                            </p>
+                            <div class="line"></div>
+                            <p class="info-content line5">
+                                {$vo.brief}
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+                {/volist}
+        </div>
+        <div class="row">
+           {volist name="casean" id="vo"}
+            <div class="col-sm-3 col-xs-12">
+                <div class="col-con">
+                    <p class="con-title">经典案例 </p>
+                    <a class="con-item" href="/casean/id/{$vo.cd_id}">
+                        <img class="index-img" height="200px" src="{$vo.cd_images[0]}">
+                        <div class="item-info">
+                            <p class="info-title line2">
+                                {$vo.cd_title}
+                            </p>
+                            <div class="line"></div>
+                            <p class="info-content line5">
+                                {$vo.cd_brief}
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {/volist}
+        </div>
+    </div>
+</div>
+
+{/block}
